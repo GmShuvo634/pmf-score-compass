@@ -7,7 +7,9 @@ import {
   LineElement,
   Filler,
   Tooltip,
-  Legend
+  Legend,
+  ChartData,
+  ChartOptions
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 
@@ -26,7 +28,8 @@ interface RadarChartProps {
 }
 
 const RadarChart = ({ labels, data }: RadarChartProps) => {
-  const chartRef = useRef<ChartJS>(null);
+  // Fix: Use correct type for the chart ref
+  const chartRef = useRef<ChartJS<"radar"> | null>(null);
   
   // Check if dark mode is enabled
   const isDarkMode = document.documentElement.classList.contains("dark");

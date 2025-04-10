@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { toast } from "sonner"; // Import directly from sonner package, not from the UI component
 
 export interface PMFFormProps {
   onSubmit: (formData: PMFFormData) => void;
